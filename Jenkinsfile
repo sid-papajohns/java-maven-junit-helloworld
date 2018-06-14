@@ -21,13 +21,13 @@ node(){
 
     stage('Build'){
         container('maven'){
-	try {
-          BUILD_ID = sh(returnStdout: true, script: 'echo "`git rev-parse --verify HEAD`"')
-          sh 'mvn -f pom.xml clean org.jacoco:jacoco-maven-plugin:0.8.0::prepare-agent install'
-		currentBuild.result = 'SUCCESS'
-	}catch (Exception err){
-		currentBuild.result = 'FAILURE'
-        }
+		try {
+          	BUILD_ID = sh(returnStdout: true, script: 'echo "`git rev-parse --verify HEAD`"')
+          		   sh 'mvn -f pom.xml clean org.jacoco:jacoco-maven-plugin:0.8.0::prepare-agent install'
+			   currentBuild.result = 'SUCCESS'
+		}catch (Exception err){
+			   currentBuild.result = 'FAILURE'
+        	}
 	}
     }
     
