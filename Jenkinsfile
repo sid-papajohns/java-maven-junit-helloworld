@@ -31,7 +31,7 @@ node(){
 	}
     }
     
-    /*stage('SonarAnalysis'){
+    /****stage('SonarAnalysis'){
         withSonarQubeEnv {
             container('maven'){
                 sh 'mvn -f pom.xml sonar:sonar -Dsonar.projectName=Mapping-Project-Common -Dsonar.projectKey=Mapping-Project-Common'
