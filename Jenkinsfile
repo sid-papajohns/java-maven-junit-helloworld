@@ -9,7 +9,7 @@ node(){
       
     stage('Checkout') {
         container('jnlp') {
-            GIT_COMMIT_ID = checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
+            GIT_COMMIT_ID=checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
             doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], 
             userRemoteConfigs: [[credentialsId: 'jenkins-papajohns', 
             url: 'https://github.com/ekta-papajohns/java-maven-junit-helloworld.git/']]]).GIT_COMMIT
