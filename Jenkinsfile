@@ -30,6 +30,14 @@ node(){
         }
 	}
     }
+	
+	bitbucketStatusNotify(
+      buildState: 'INPROGRESS',
+      buildKey: 'build',
+      buildName: 'Build',
+      repoSlug: 'my-awesome-project',
+      commitId: 'a83c709e9d514421ef614ef0a1117366c84c6304'      
+    )
     
     /*stage('SonarAnalysis'){
         withSonarQubeEnv {
