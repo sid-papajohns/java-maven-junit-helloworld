@@ -39,7 +39,7 @@ node(){
       commitId: 'a83c709e9d514421ef614ef0a1117366c84c6304'      
     )
     
-    /*stage('SonarAnalysis'){
+    /***stage('SonarAnalysis'){
         withSonarQubeEnv {
             container('maven'){
                 sh 'mvn -f pom.xml sonar:sonar -Dsonar.projectName=Mapping-Project-Common -Dsonar.projectKey=Mapping-Project-Common'
